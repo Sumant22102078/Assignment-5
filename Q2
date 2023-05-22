@@ -1,0 +1,7 @@
+s = int(input('For range, enter starting no. '))
+e = int(input('Enter ending no. '))
+n = int(input('Enter no. to which divisibility is to be checked- '))
+for i in range(s,e+1):
+    if i % n == 0:
+        print(i)
+print(f"From {s} to {e}, the above no.s are divisible by {n}")
