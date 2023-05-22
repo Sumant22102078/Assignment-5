@@ -1,0 +1,10 @@
+a = int(input("Enter starting no.- "))
+b = int(input("Enter ending no.- "))
+z = 0
+for x in range(a,b+1):
+    for y in range(2,int(x/2)+1):
+        if x % y == 0:
+            z = x                         #to know that x is not a prime no.
+    if z != x and x != 1:                 #to know that x is a prime no. and it was printing 1 if not added cond.
+        print(x)
+print(f"The above are all the primes from {a} to {b}")
