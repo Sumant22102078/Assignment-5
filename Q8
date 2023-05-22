@@ -1,0 +1,29 @@
+no_list = []
+positives = []
+negatives = []
+odds = []
+evens = []
+count = dict()
+print("Enter 10 integer values.")
+for i in range(10):
+    no_list.append(int(input("")))
+for x in no_list:
+    if x > 0:
+        if x not in positives:
+            positives.append(x)
+        if x % 2 == 0 and x not in evens:
+            evens.append(x)
+        if x % 2 != 0 and x not in odds:
+            odds.append(x)
+    elif x < 0 and x not in negatives:
+        negatives.append(x)
+    if x not in count:
+        count[x] = 1
+    elif x in count:
+        count[x] += 1
+print(f'''Input integers list - {no_list}
+a. positive no.s - {positives}
+b. negative no.s - {negatives}
+c. odd no.s - {odds}
+d. even no.s - {evens}
+e. no. of times each integer occurs in list - {count}''')
